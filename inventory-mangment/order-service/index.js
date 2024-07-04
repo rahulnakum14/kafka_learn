@@ -8,7 +8,6 @@ const Producer = kafka.Producer;
 const client = new kafka.KafkaClient({ kafkaHost: 'localhost:9092' });
 const producer = new Producer(client);
 
-// Ensure the topic exists
 const admin = new kafka.Admin(client);
 admin.createTopics([{ topic: 'order-topic', partitions: 1, replicationFactor: 1 }], (error, result) => {
   if (error) {

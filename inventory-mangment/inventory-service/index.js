@@ -12,7 +12,6 @@ consumer.on('message', (message) => {
   const order = JSON.parse(message.value);
   console.log('Order received:', order);
 
-  // Here you would update the inventory based on the order
   console.log(`Updating inventory for product ${order.productId} with quantity ${order.quantity}`);
 });
 
