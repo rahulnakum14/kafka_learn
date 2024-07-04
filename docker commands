@@ -1,0 +1,3 @@
+docker exec <container name> ls - execute command and return result into terminal itself.
+
+docker exec -it <container name> bash - to attach for teminal do not disconnect
